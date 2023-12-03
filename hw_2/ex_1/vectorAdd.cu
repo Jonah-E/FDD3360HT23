@@ -96,7 +96,8 @@ int main(int argc, char **argv) {
     return 1;
   }
 
-  printf("The input length is %d\n", inputLength);
+  printf("inputLength, cpu_exec (s), host_to_device (s), gpu_exec (s), device_to_host (s), differece\n");
+  printf("%d,", inputLength);
 
   hostInput1 = (DataType *)malloc(sizeof(DataType) * inputLength);
   hostInput2 = (DataType *)malloc(sizeof(DataType) * inputLength);
@@ -108,8 +109,9 @@ int main(int argc, char **argv) {
   time_start = getCpuSeconds();
   vecAddCPU(hostOutput, hostInput1, hostInput2, inputLength);
   time_elapsed = getCpuSeconds() - time_start;
-  printf("vecAddCPU time: %lf s\n", time_elapsed);
+  printf("%lf,", time_elapsed);
 
+  time_start = getCpuSeconds();
   cudaMalloc(&deviceInput1, sizeof(DataType) * inputLength);
   cudaMalloc(&deviceInput2, sizeof(DataType) * inputLength);
   cudaMalloc(&deviceOutput, sizeof(DataType) * inputLength);
@@ -119,6 +121,8 @@ int main(int argc, char **argv) {
   cudaMemcpy(deviceInput2, hostInput2, sizeof(DataType) * inputLength,
              cudaMemcpyHostToDevice);
   cudaMemset(deviceOutput, 0, sizeof(DataType) * inputLength);
+  time_elapsed = getCpuSeconds() - time_start;
+  printf("%lf,", time_elapsed);
 
   dim3 block(TPW, 1, 1);
   dim3 grid((inputLength + TPW - 1) / TPW, 1, 1);
@@ -127,21 +131,24 @@ int main(int argc, char **argv) {
                              inputLength);
   cudaDeviceSynchronize();
   time_elapsed = getCpuSeconds() - time_start;
+  printf("%lf,", time_elapsed);
 
   cudaError_t deviceError = cudaGetLastError();
   if (deviceError != cudaSuccess) {
     printf("Error when running GPU: %s (%d)\n", cudaGetErrorString(deviceError),
            deviceError);
   } else {
-    printf("vecAddGPU time: %lf s\n", time_elapsed);
-
     resultRef = (DataType *)malloc(sizeof(DataType) * inputLength);
+
+    time_start = getCpuSeconds();
     cudaMemcpy(resultRef, deviceOutput, sizeof(DataType) * inputLength,
                cudaMemcpyDeviceToHost);
+    time_elapsed = getCpuSeconds() - time_start;
+    printf("%lf,", time_elapsed);
 
     DataType diffEu =
         euclicianNormTwoVectors(resultRef, hostOutput, inputLength);
-    printf("Euclidian norm of the difference: %lf", diffEu);
+    printf("%lf\n", diffEu);
   }
 
   cudaFree(deviceInput1);
