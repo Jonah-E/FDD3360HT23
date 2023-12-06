@@ -128,19 +128,16 @@ int main(int argc, char **argv) {
   numCRows = numARows;
   numCColumns = numBColumns;
 
-  printf("Input matrix dim (%d x %d) (%d x %d) (%d x %d)\n", numARows,
-         numAColumns, numBRows, numBColumns, numCRows, numCColumns);
+  printf("numARows x numAColumns x numBColumns, cpu_exec (s), host_to_device (s), gpu_exec (s), device_to_host (s), differece\n");
+  printf("%d x %d x %d, ", numARows , numAColumns , numBColumns);
 
   hostA = (DataType *)malloc(sizeof(DataType) * numARows * numAColumns);
   hostB = (DataType *)malloc(sizeof(DataType) * numBRows * numBColumns);
   hostC = (DataType *)malloc(sizeof(DataType) * numCRows * numCColumns);
 
-  time_start = getCpuSeconds();
   generateRandMatrix(hostA, numARows, numAColumns, 0, 1);
   generateRandMatrix(hostB, numBRows, numBColumns, 0, 1);
   memset(hostC, 0, sizeof(DataType) * numARows * numBColumns);
-  time_elapsed = getCpuSeconds() - time_start;
-  printf("host matrix init time: %lf s\n", time_elapsed);
 
   time_start = getCpuSeconds();
   gemmCPU(hostA, hostB, hostC, numARows, numAColumns, numBRows, numBColumns);
@@ -148,7 +145,6 @@ int main(int argc, char **argv) {
   printf("gemmCPU time: %lf s\n", time_elapsed);
 
   /* Allocate the needed Device memory*/
-  time_start = getCpuSeconds();
   deviceError = cudaMalloc(&deviceA, sizeof(DataType) * numARows * numAColumns);
   if (deviceError != cudaSuccess) {
     printf("Error when running GPU: %s (%d)\n", cudaGetErrorString(deviceError),
