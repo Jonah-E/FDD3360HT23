@@ -188,8 +188,8 @@ int main(int argc, char **argv) {
   }
 
   dim3 block(BLOCK_X_SIZE, BLOCK_Y_SIZE);
-  dim3 grid((numCRows + BLOCK_X_SIZE - 1) / BLOCK_X_SIZE,
-            (numCColumns + BLOCK_Y_SIZE - 1) / BLOCK_Y_SIZE);
+  dim3 grid((numCColumns + BLOCK_X_SIZE - 1) / BLOCK_X_SIZE,
+            (numCRows + BLOCK_Y_SIZE - 1) / BLOCK_Y_SIZE);
 
   time_start = getCpuSeconds();
   gemmGPU2D<<<grid, block>>>(deviceA, deviceB, deviceC, numARows, numAColumns,
