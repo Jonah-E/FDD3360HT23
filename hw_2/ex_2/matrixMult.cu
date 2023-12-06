@@ -2,7 +2,12 @@
 #include <stdlib.h>
 #include <sys/time.h>
 
+#ifdef USE_FLOAT
+#define DataType float
+#pragma message ( "Compiling with DataType float" )
+#else
 #define DataType double
+#endif
 
 #define TPW 32
 #define BLOCK_X_SIZE TPW
