@@ -147,9 +147,10 @@ int main(int argc, char **argv) {
   time_start = getCpuSeconds();
   gemmCPU(hostA, hostB, hostC, numARows, numAColumns, numBRows, numBColumns);
   time_elapsed = getCpuSeconds() - time_start;
-  printf("gemmCPU time: %lf s\n", time_elapsed);
+  printf("%lf,", time_elapsed);
 
   /* Allocate the needed Device memory*/
+  time_start = getCpuSeconds();
   deviceError = cudaMalloc(&deviceA, sizeof(DataType) * numARows * numAColumns);
   if (deviceError != cudaSuccess) {
     printf("Error when running GPU: %s (%d)\n", cudaGetErrorString(deviceError),
@@ -187,11 +188,12 @@ int main(int argc, char **argv) {
     printf("Error when running GPU: %s (%d)\n", cudaGetErrorString(deviceError),
            deviceError);
   }
+  time_elapsed = getCpuSeconds() - time_start;
+  printf("%lf,", time_elapsed);
 
   dim3 block(BLOCK_X_SIZE, BLOCK_Y_SIZE);
   dim3 grid((numCColumns + BLOCK_X_SIZE - 1) / BLOCK_X_SIZE,
             (numCRows + BLOCK_Y_SIZE - 1) / BLOCK_Y_SIZE);
-
   time_start = getCpuSeconds();
   gemmGPU2D<<<grid, block>>>(deviceA, deviceB, deviceC, numARows, numAColumns,
                              numBRows, numBColumns);
@@ -203,15 +205,18 @@ int main(int argc, char **argv) {
     printf("Error when running GPU: %s (%d)\n", cudaGetErrorString(deviceError),
            deviceError);
   } else {
-    printf("gemmGPU time: %lf s\n", time_elapsed);
+    printf("%lf,", time_elapsed);
 
     resultRef = (DataType *)malloc(sizeof(DataType) * numCRows * numCColumns);
+    time_start = getCpuSeconds();
     cudaMemcpy(resultRef, deviceC, sizeof(DataType) * numCRows * numCColumns,
                cudaMemcpyDeviceToHost);
+    time_elapsed = getCpuSeconds() - time_start;
+    printf("%lf,", time_elapsed);
 
     DataType diffEu =
-        euclicianNormTwoMatrices(resultRef, hostC, numCRows, numCColumns);
-    printf("Euclidian norm of the difference: %lf", diffEu);
+        euclidianNormTwoMatrices(resultRef, hostC, numCRows, numCColumns);
+    printf("%lf\n", diffEu);
   }
 
   cudaFree(deviceA);
