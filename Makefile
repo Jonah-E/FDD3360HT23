@@ -2,7 +2,7 @@ export BUILD_DIR = $(abspath ./)
 
 all: hw_2
 
-hw_2: vectorAdd matrixMult
+hw_2: vectorAdd matrixMult histogram
 
 vectorAdd:
 	$(MAKE) -C hw_2/ex_1
@@ -12,4 +12,7 @@ matrixMult:
 
 matrixMult-float:
 	$(MAKE) -C hw_2/ex_2 FLAGS=-DUSE_FLOAT
+
+histogram:
+	$(MAKE) -C hw_3/ex_1
 
