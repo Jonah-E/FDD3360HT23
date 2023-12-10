@@ -1,11 +1,10 @@
 
+#include <random>
 #include <stdio.h>
 #include <sys/time.h>
-#include <random>
 
 #define NUM_BINS 4096
-#define TPW 32
-#define TPB 32*TPW
+#define TPB 1024
 
 #define SATURATION 127
 
@@ -18,45 +17,36 @@ __global__ void histogram_kernel(unsigned int *input, unsigned int *bins,
   __shared__ unsigned int local_bins[NUM_BINS];
 
   /* Source: https://stackoverflow.com/a/6487821 */
-  for (unsigned int i = idx; i < NUM_BINS; i += blockDim.x){
+  for (unsigned int i = idx; i < NUM_BINS; i += blockDim.x) {
     local_bins[i] = 0;
   }
   __syncthreads();
 
-  for (unsigned int i = idx; i < num_elements; i += blockDim.x){
-      if ( input[i] < num_bins){
-        atomicAdd(&local_bins[input[i]], 1);
-      }
+  for (unsigned int i = idx; i < num_elements; i += blockDim.x) {
+    if (input[i] < num_bins) {
+      atomicAdd(&local_bins[input[i]], 1);
+    }
   }
 
   __syncthreads();
-  for (unsigned int i = idx; i < NUM_BINS; i += blockDim.x){
-    bins[i] = local_bins[i];
-  }
-
-}
-
-/* Cuda kernel to set all values of a vector to a max value.*/
-__global__ void convert_kernel(unsigned int *bins, unsigned int num_bins) {
-
-  const int idx = threadIdx.x + blockDim.x * blockIdx.x;
-
-  if (idx < num_bins )
-  {
-    if (bins[idx] > SATURATION){
-      bins[idx] = SATURATION;
+  for (unsigned int i = idx; i < NUM_BINS; i += blockDim.x) {
+    if (local_bins[i] < SATURATION) {
+      bins[i] = local_bins[i];
+    } else {
+      bins[i] = SATURATION;
     }
   }
 }
 
-/* Function to calculate the Euclidian norm on the difference between two vectors.*/
-static double euclicianNormTwoVectors(unsigned int *vectorA, unsigned int *vectorB,
-                                 int length) {
+/* Function to calculate the Euclidian norm on the difference between two
+ * vectors.*/
+static double euclicianNormTwoVectors(unsigned int *vectorA,
+                                      unsigned int *vectorB, int length) {
   double diffEu = 0;
   double *result = (double *)malloc(sizeof(double) * length);
 
   for (int i = 0; i < length; ++i) {
-    result[i] = (double) (vectorA[i] - vectorB[i]);
+    result[i] = (double)(vectorA[i] - vectorB[i]);
     diffEu += result[i] * result[i];
   }
   diffEu = sqrt(diffEu);
@@ -67,14 +57,12 @@ static double euclicianNormTwoVectors(unsigned int *vectorA, unsigned int *vecto
 
 /* Calculate a histogram on the CPU.*/
 void histogram_cpu(unsigned int *input, unsigned int *bins,
-                                 unsigned int num_elements,
-                                 unsigned int num_bins) {
+                   unsigned int num_elements, unsigned int num_bins) {
 
-  for(int i = 0; i < num_elements; ++i)
-  {
+  for (int i = 0; i < num_elements; ++i) {
     unsigned int index = input[i];
-    if(index < num_bins){
-      if (bins[index] < 127){
+    if (index < num_bins) {
+      if (bins[index] < 127) {
         bins[index] += 1;
       }
     } else {
@@ -100,8 +88,8 @@ static unsigned int randfrom(unsigned int min, unsigned int max) {
 }
 
 /* Populate a given vector memory location with values from a given range.*/
-static void generateRandVector(unsigned int *vector, int length, unsigned int min,
-                        unsigned int max) {
+static void generateRandVector(unsigned int *vector, int length,
+                               unsigned int min, unsigned int max) {
   srand(time(NULL));
 
   for (int i = 0; i < length; ++i) {
@@ -148,30 +136,33 @@ int main(int argc, char **argv) {
 
   deviceError = cudaMalloc(&deviceBins, sizeof(unsigned int) * NUM_BINS);
   if (deviceError != cudaSuccess) {
-    printf("Error when allocating memory in GPU: %s (%d)\n", cudaGetErrorString(deviceError),
-           deviceError);
+    printf("Error when allocating memory in GPU: %s (%d)\n",
+           cudaGetErrorString(deviceError), deviceError);
   }
   deviceError = cudaMalloc(&deviceInput, sizeof(unsigned int) * inputLength);
   if (deviceError != cudaSuccess) {
-    printf("Error when allocating memory in GPU: %s (%d)\n", cudaGetErrorString(deviceError),
-           deviceError);
+    printf("Error when allocating memory in GPU: %s (%d)\n",
+           cudaGetErrorString(deviceError), deviceError);
   }
-  deviceError = cudaMemcpy(deviceInput, hostInput, sizeof(unsigned int) * inputLength, cudaMemcpyHostToDevice);
+  deviceError =
+      cudaMemcpy(deviceInput, hostInput, sizeof(unsigned int) * inputLength,
+                 cudaMemcpyHostToDevice);
   if (deviceError != cudaSuccess) {
-    printf("Error when copying data to GPU: %s (%d)\n", cudaGetErrorString(deviceError),
-           deviceError);
+    printf("Error when copying data to GPU: %s (%d)\n",
+           cudaGetErrorString(deviceError), deviceError);
   }
-  deviceError = cudaMemset(deviceBins, 0 ,sizeof(unsigned int) * NUM_BINS);
+  deviceError = cudaMemset(deviceBins, 0, sizeof(unsigned int) * NUM_BINS);
   if (deviceError != cudaSuccess) {
-    printf("Error when setting memory to value in GPU: %s (%d)\n", cudaGetErrorString(deviceError),
-           deviceError);
+    printf("Error when setting memory to value in GPU: %s (%d)\n",
+           cudaGetErrorString(deviceError), deviceError);
   }
 
   dim3 hist_block(TPB, 1, 1);
   dim3 hist_grid(1, 1, 1);
 
   time_start = getCpuSeconds();
-  histogram_kernel<<<hist_grid,hist_block>>>(deviceInput, deviceBins, inputLength, NUM_BINS);
+  histogram_kernel<<<hist_grid, hist_block>>>(deviceInput, deviceBins,
+                                              inputLength, NUM_BINS);
   cudaDeviceSynchronize();
   deviceError = cudaGetLastError();
   if (deviceError != cudaSuccess) {
@@ -179,15 +170,9 @@ int main(int argc, char **argv) {
            deviceError);
   }
 
-  dim3 conv_block(TPB, 1, 1);
-  dim3 conv_grid((NUM_BINS+TPB-1)/TPB, 1, 1);
-
-  convert_kernel<<<conv_grid,conv_block>>>(deviceBins, NUM_BINS);
-  cudaDeviceSynchronize();
   time_elapsed = getCpuSeconds() - time_start;
   printf("Total GPU time: %lf (s)\n", time_elapsed);
 
-  deviceError = cudaGetLastError();
   if (deviceError != cudaSuccess) {
     printf("Error when running GPU: %s (%d)\n", cudaGetErrorString(deviceError),
            deviceError);
@@ -197,8 +182,7 @@ int main(int argc, char **argv) {
     cudaMemcpy(resultRef, deviceBins, sizeof(unsigned int) * NUM_BINS,
                cudaMemcpyDeviceToHost);
 
-    double diffEu =
-        euclicianNormTwoVectors(resultRef, hostBins, NUM_BINS);
+    double diffEu = euclicianNormTwoVectors(resultRef, hostBins, NUM_BINS);
     printf("Euclidian norm: %lf\n", diffEu);
   }
 
@@ -211,4 +195,3 @@ int main(int argc, char **argv) {
 
   return 0;
 }
-
