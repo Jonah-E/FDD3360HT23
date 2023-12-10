@@ -4,7 +4,8 @@
 #include <random>
 
 #define NUM_BINS 4096
-#define TPB 1024
+#define TPW 32
+#define TPB 32*TPW
 
 #define SATURATION 127
 
@@ -12,24 +13,25 @@
 __global__ void histogram_kernel(unsigned int *input, unsigned int *bins,
                                  unsigned int num_elements,
                                  unsigned int num_bins) {
-  const unsigned int idx = threadIdx.x + blockDim.x * blockIdx.x;
+  const unsigned int idx = threadIdx.x;
 
   __shared__ unsigned int local_bins[NUM_BINS];
 
-  //printf("%d\n", blockIdx.x);
   /* Source: https://stackoverflow.com/a/6487821 */
-  for (unsigned int i = threadIdx.x; i < num_bins; i += blockDim.x){
+  for (unsigned int i = idx; i < NUM_BINS; i += blockDim.x){
     local_bins[i] = 0;
   }
   __syncthreads();
 
-  if (idx < num_elements && input[idx] < num_bins){
-    atomicAdd(&local_bins[input[idx]], 1);
+  for (unsigned int i = idx; i < num_elements; i += blockDim.x){
+      if ( input[i] < num_bins){
+        atomicAdd(&local_bins[input[i]], 1);
+      }
   }
 
   __syncthreads();
-  for (unsigned int i = threadIdx.x; i < num_bins; i += blockDim.x){
-    atomicAdd(&bins[i], local_bins[i]);
+  for (unsigned int i = idx; i < NUM_BINS; i += blockDim.x){
+    bins[i] = local_bins[i];
   }
 
 }
@@ -117,7 +119,7 @@ int main(int argc, char **argv) {
   double time_start, time_elapsed;
   cudaError_t deviceError;
 
-  unsigned int inputLength;
+  int inputLength;
   unsigned int *hostInput;
   unsigned int *hostBins;
   unsigned int *resultRef;
@@ -166,7 +168,7 @@ int main(int argc, char **argv) {
   }
 
   dim3 hist_block(TPB, 1, 1);
-  dim3 hist_grid((inputLength + TPB - 1) / TPB, 1, 1);
+  dim3 hist_grid(1, 1, 1);
 
   time_start = getCpuSeconds();
   histogram_kernel<<<hist_grid,hist_block>>>(deviceInput, deviceBins, inputLength, NUM_BINS);
