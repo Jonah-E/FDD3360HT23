@@ -12,28 +12,34 @@
 __global__ void histogram_kernel(unsigned int *input, unsigned int *bins,
                                  unsigned int num_elements,
                                  unsigned int num_bins) {
-  const unsigned int idx = threadIdx.x;
+  const unsigned int idx = threadIdx.x + blockDim.x * blockIdx.x;
 
   __shared__ unsigned int local_bins[NUM_BINS];
 
   /* Source: https://stackoverflow.com/a/6487821 */
-  for (unsigned int i = idx; i < NUM_BINS; i += blockDim.x) {
+  for (unsigned int i = threadIdx.x; i < num_bins; i += blockDim.x) {
     local_bins[i] = 0;
   }
   __syncthreads();
 
-  for (unsigned int i = idx; i < num_elements; i += blockDim.x) {
-    if (input[i] < num_bins) {
-      atomicAdd(&local_bins[input[i]], 1);
-    }
+  if (input[idx] < num_bins) {
+    atomicAdd(&local_bins[input[idx]], 1);
   }
 
   __syncthreads();
-  for (unsigned int i = idx; i < NUM_BINS; i += blockDim.x) {
-    if (local_bins[i] < SATURATION) {
-      bins[i] = local_bins[i];
-    } else {
-      bins[i] = SATURATION;
+  for (unsigned int i = threadIdx.x; i < num_bins; i += blockDim.x) {
+    atomicAdd(&bins[i], local_bins[i]);
+  }
+}
+
+/* Cuda kernel to set all values of a vector to a max value.*/
+__global__ void convert_kernel(unsigned int *bins, unsigned int num_bins) {
+
+  const int idx = threadIdx.x + blockDim.x * blockIdx.x;
+
+  if (idx < num_bins) {
+    if (bins[idx] > SATURATION) {
+      bins[idx] = SATURATION;
     }
   }
 }
@@ -107,7 +113,7 @@ int main(int argc, char **argv) {
   double time_start, time_elapsed;
   cudaError_t deviceError;
 
-  int inputLength;
+  unsigned int inputLength;
   unsigned int *hostInput;
   unsigned int *hostBins;
   unsigned int *resultRef;
@@ -158,7 +164,7 @@ int main(int argc, char **argv) {
   }
 
   dim3 hist_block(TPB, 1, 1);
-  dim3 hist_grid(1, 1, 1);
+  dim3 hist_grid((inputLength + TPB - 1) / TPB, 1, 1);
 
   time_start = getCpuSeconds();
   histogram_kernel<<<hist_grid, hist_block>>>(deviceInput, deviceBins,
@@ -170,9 +176,15 @@ int main(int argc, char **argv) {
            deviceError);
   }
 
+  dim3 conv_block(TPB, 1, 1);
+  dim3 conv_grid((NUM_BINS + TPB - 1) / TPB, 1, 1);
+
+  convert_kernel<<<conv_grid, conv_block>>>(deviceBins, NUM_BINS);
+  cudaDeviceSynchronize();
   time_elapsed = getCpuSeconds() - time_start;
   printf("Total GPU time: %lf (s)\n", time_elapsed);
 
+  deviceError = cudaGetLastError();
   if (deviceError != cudaSuccess) {
     printf("Error when running GPU: %s (%d)\n", cudaGetErrorString(deviceError),
            deviceError);
