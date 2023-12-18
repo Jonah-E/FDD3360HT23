@@ -22,11 +22,14 @@ __global__ void histogram_kernel(unsigned int *input, unsigned int *bins,
   }
   __syncthreads();
 
-  if (input[idx] < num_bins) {
-    atomicAdd(&local_bins[input[idx]], 1);
+  if (idx < num_elements) {
+    unsigned int index = input[idx];
+    if (index < num_bins) {
+      atomicAdd(&local_bins[index], 1);
+    }
   }
-
   __syncthreads();
+
   for (unsigned int i = threadIdx.x; i < num_bins; i += blockDim.x) {
     atomicAdd(&bins[i], local_bins[i]);
   }
