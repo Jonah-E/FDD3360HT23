@@ -106,6 +106,15 @@ static void generateRandVector(unsigned int *vector, int length,
   }
 }
 
+static void printBins(unsigned int *bins, unsigned int num_bins) {
+
+  printf("Histogram bins: \n");
+  for (unsigned int i = 0; i < num_bins; ++i) {
+    printf("%d,", bins[i]);
+  }
+  printf("\n");
+}
+
 static void usage(char *prog) {
   printf("Usage: %s <inputLength>\n"
          "Where <inputLength> is an integer larger than zero.\n",
@@ -199,7 +208,10 @@ int main(int argc, char **argv) {
 
     double diffEu = euclicianNormTwoVectors(resultRef, hostBins, NUM_BINS);
     printf("Euclidian norm: %lf\n", diffEu);
+
+    printBins(resultRef, NUM_BINS);
   }
+
 
   cudaFree(deviceInput);
   cudaFree(deviceBins);
