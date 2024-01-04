@@ -109,7 +109,7 @@ int main(int argc, char **argv) {
   numberOfSegments = (inputLength + (segmentSize - 1)) / segmentSize;
 
   printf("inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece\n");
-  printf("%d,%d,", inputLength, segmentSize);
+  printf("%d, %d, ", inputLength, segmentSize);
 
   deviceError =
       cudaHostAlloc((void **)&hostInput1, sizeof(DataType) * inputLength,
@@ -141,7 +141,7 @@ int main(int argc, char **argv) {
   time_start = getCpuSeconds();
   vecAddCPU(hostOutput, hostInput1, hostInput2, inputLength);
   time_elapsed = getCpuSeconds() - time_start;
-  printf("%lf,", time_elapsed);
+  printf("%lf, ", time_elapsed);
 
   deviceError = cudaMalloc(&deviceInput1, sizeof(DataType) * inputLength);
   if (deviceError != cudaSuccess) {
@@ -200,7 +200,7 @@ int main(int argc, char **argv) {
     cudaStreamDestroy(streams[i]);
   }
   time_elapsed = getCpuSeconds() - time_start;
-  printf("%lf,", time_elapsed);
+  printf("%lf, ", time_elapsed);
 
   deviceError = cudaGetLastError();
   if (deviceError != cudaSuccess) {
