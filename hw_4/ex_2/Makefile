@@ -5,6 +5,7 @@ NVCCFLAGS ?= -arch=sm_70
 BUILD_DIR ?= ./
 
 all: $(BUILD_DIR)/vectorAdd-stream
+	cp run $(BUILD_DIR)/run-vectorAdd-stream
 
 $(BUILD_DIR)/%: $(BUILD_DIR)/%.o
 	$(NVCC) $(NVCCFLAGS) $^ -o $@

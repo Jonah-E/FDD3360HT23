@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+
+VECTOR_LENGHT="102400000"
+SEGMENT_SIZES="25600 256000 2560000 25600000"
+
+OUTPUT_FILE="output_vectorAdd_stream.txt"
+LOOPS=$(seq 1 100)
+
+date > $OUTPUT_FILE
+for S_SIZE in $SEGMENT_SIZES;
+do
+  for i in $LOOPS
+  do
+    ./vectorAdd-stream $VECTOR_LENGHT $S_SIZE | tee -a $OUTPUT_FILE
+  done
+done
