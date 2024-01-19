@@ -21,7 +21,7 @@ for V_LEN in $VECTOR_LENGHT;
 do
   for i in $LOOPS
   do
-    ./vectorAdd $V_LEN $SEGMENT_SIZE | tee -a $OUTPUT_FILE
+    ./vectorAdd $V_LEN | tee -a $OUTPUT_FILE
   done
 done
 
