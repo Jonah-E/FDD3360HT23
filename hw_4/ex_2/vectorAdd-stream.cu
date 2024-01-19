@@ -162,7 +162,8 @@ int main(int argc, char **argv) {
   dim3 block(TPW, 1, 1);
   dim3 grid((segmentSize + TPW - 1) / TPW, 1, 1);
 
-  cudaStream_t streams[numberOfSegments];
+  #define NUMBER_OF_STREAMS 4
+  cudaStream_t streams[NUMBER_OF_STREAMS];
   int inputLength_stream = segmentSize;
   int stream_id = 0;
 
@@ -192,10 +193,13 @@ int main(int argc, char **argv) {
     cudaMemcpyAsync(&resultRef[i], &deviceOutput[i],
                     sizeof(DataType) * inputLength_stream,
                     cudaMemcpyDeviceToHost, streams[stream_id]);
-    ++stream_id;
+
+    stream_id += 1;
+    if (stream_id >= NUMBER_OF_STREAMS)
+      stream_id = 0;
   }
 
-  for (int i = 0; i < numberOfSegments; ++i) {
+  for (int i = 0; i < NUMBER_OF_STREAMS; ++i) {
     cudaStreamSynchronize(streams[i]);
     cudaStreamDestroy(streams[i]);
   }
