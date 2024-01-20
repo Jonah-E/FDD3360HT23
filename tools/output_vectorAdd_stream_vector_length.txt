@@ -1,0 +1,401 @@
+Sat Jan 20 04:19:41 PM UTC 2024
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+10000000, 2560, 0.079341, 0.193674, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+10000000, 2560, 0.072936, 0.193926, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+10000000, 2560, 0.072151, 0.201850, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+10000000, 2560, 0.070205, 0.201162, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+10000000, 2560, 0.074632, 0.202765, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+10000000, 2560, 0.097358, 0.275643, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+10000000, 2560, 0.092182, 0.255932, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+10000000, 2560, 0.098081, 0.267209, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+10000000, 2560, 0.071517, 0.192212, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+10000000, 2560, 0.072726, 0.197806, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+10000000, 2560, 0.072863, 0.190373, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+10000000, 2560, 0.074527, 0.194231, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+10000000, 2560, 0.075503, 0.196457, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+10000000, 2560, 0.072123, 0.195320, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+10000000, 2560, 0.071580, 0.190747, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+10000000, 2560, 0.071379, 0.190163, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+10000000, 2560, 0.071242, 0.200120, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+10000000, 2560, 0.089831, 0.257366, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+10000000, 2560, 0.101185, 0.290829, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+10000000, 2560, 0.087418, 0.271743, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+20000000, 2560, 0.149648, 0.411348, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+20000000, 2560, 0.143955, 0.417034, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+20000000, 2560, 0.142130, 0.407298, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+20000000, 2560, 0.139923, 0.408606, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+20000000, 2560, 0.150505, 0.406899, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+20000000, 2560, 0.179124, 0.543910, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+20000000, 2560, 0.185970, 0.481072, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+20000000, 2560, 0.149717, 0.404267, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+20000000, 2560, 0.144512, 0.397478, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+20000000, 2560, 0.145400, 0.410121, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+20000000, 2560, 0.145415, 0.390025, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+20000000, 2560, 0.184376, 0.563135, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+20000000, 2560, 0.179150, 0.549102, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+20000000, 2560, 0.166177, 0.396680, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+20000000, 2560, 0.143530, 0.398342, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+20000000, 2560, 0.144324, 0.395197, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+20000000, 2560, 0.143318, 0.388011, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+20000000, 2560, 0.143129, 0.408888, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+20000000, 2560, 0.177840, 0.553841, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+20000000, 2560, 0.192904, 0.473487, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+30000000, 2560, 0.212558, 0.631902, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+30000000, 2560, 0.233823, 0.651190, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+30000000, 2560, 0.208086, 0.631835, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+30000000, 2560, 0.280820, 0.890811, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+30000000, 2560, 0.239777, 0.641678, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+30000000, 2560, 0.218994, 0.635809, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+30000000, 2560, 0.213614, 0.644587, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+30000000, 2560, 0.277269, 0.882391, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+30000000, 2560, 0.213112, 0.639733, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+30000000, 2560, 0.221640, 0.637170, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+30000000, 2560, 0.214985, 0.624884, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+30000000, 2560, 0.213127, 0.706599, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+30000000, 2560, 0.277391, 0.859081, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+30000000, 2560, 0.235242, 0.640903, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+30000000, 2560, 0.211957, 0.642281, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+30000000, 2560, 0.206867, 0.642222, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+30000000, 2560, 0.282480, 0.876573, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+30000000, 2560, 0.214115, 0.622475, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+30000000, 2560, 0.214788, 0.631092, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+30000000, 2560, 0.211971, 0.628380, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+40000000, 2560, 0.370706, 1.220559, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+40000000, 2560, 0.284602, 0.901873, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+40000000, 2560, 0.294348, 0.908995, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+40000000, 2560, 0.287241, 1.202538, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+40000000, 2560, 0.287164, 0.924317, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+40000000, 2560, 0.291103, 0.893188, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+40000000, 2560, 0.292907, 0.889577, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+40000000, 2560, 0.359414, 1.151547, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+40000000, 2560, 0.283819, 0.898598, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+40000000, 2560, 0.292671, 0.900625, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+40000000, 2560, 0.366449, 1.254482, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+40000000, 2560, 0.302667, 0.906011, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+40000000, 2560, 0.280957, 0.906444, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+40000000, 2560, 0.356937, 1.205144, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+40000000, 2560, 0.292952, 0.921596, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+40000000, 2560, 0.293509, 0.920318, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+40000000, 2560, 0.280350, 1.061723, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+40000000, 2560, 0.341904, 0.905536, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+40000000, 2560, 0.279091, 0.914539, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+40000000, 2560, 0.282080, 0.892358, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+50000000, 2560, 0.461318, 1.457648, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+50000000, 2560, 0.360022, 1.210249, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+50000000, 2560, 0.359143, 1.663123, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+50000000, 2560, 0.356987, 1.191665, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+50000000, 2560, 0.357777, 1.200568, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+50000000, 2560, 0.469486, 1.669484, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+50000000, 2560, 0.355892, 1.209640, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+50000000, 2560, 0.357284, 1.316912, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+50000000, 2560, 0.371157, 1.213414, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+50000000, 2560, 0.353159, 1.194434, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+50000000, 2560, 0.465960, 1.705473, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+50000000, 2560, 0.360761, 1.179888, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+50000000, 2560, 0.359466, 1.198569, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+50000000, 2560, 0.479994, 1.357956, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+50000000, 2560, 0.354386, 1.169480, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+50000000, 2560, 0.374719, 1.657042, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+50000000, 2560, 0.372570, 1.208392, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+50000000, 2560, 0.368440, 1.214447, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+50000000, 2560, 0.445110, 1.668871, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+50000000, 2560, 0.351720, 1.163104, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+60000000, 2560, 0.424642, 2.120161, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+60000000, 2560, 0.432632, 1.546759, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+60000000, 2560, 0.433294, 2.010210, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+60000000, 2560, 0.430865, 1.571612, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+60000000, 2560, 0.428264, 1.695758, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+60000000, 2560, 0.433270, 1.534735, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+60000000, 2560, 0.425366, 1.546826, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+60000000, 2560, 0.428042, 1.559799, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+60000000, 2560, 0.430270, 1.526145, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+60000000, 2560, 0.568471, 1.614058, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+60000000, 2560, 0.435992, 1.540119, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+60000000, 2560, 0.545530, 2.005484, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+60000000, 2560, 0.441418, 1.554797, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+60000000, 2560, 0.548260, 2.196287, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+60000000, 2560, 0.436409, 1.591742, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+60000000, 2560, 0.546321, 2.221927, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+60000000, 2560, 0.428994, 1.541912, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+60000000, 2560, 0.555832, 2.137802, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+60000000, 2560, 0.448501, 1.513588, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+60000000, 2560, 0.429452, 2.166819, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+70000000, 2560, 0.502199, 1.903629, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+70000000, 2560, 0.649168, 2.775964, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+70000000, 2560, 0.520899, 1.902369, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+70000000, 2560, 0.666477, 2.338970, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+70000000, 2560, 0.496358, 1.861670, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+70000000, 2560, 0.641078, 1.971640, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+70000000, 2560, 0.505029, 1.892878, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+70000000, 2560, 0.503630, 1.960132, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+70000000, 2560, 0.505719, 2.221462, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+70000000, 2560, 0.514746, 1.943670, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+70000000, 2560, 0.638080, 2.728158, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+70000000, 2560, 0.501219, 1.897991, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+70000000, 2560, 0.660411, 2.523340, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+70000000, 2560, 0.502135, 1.955762, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+70000000, 2560, 0.652532, 2.098308, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+70000000, 2560, 0.506166, 1.969807, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+70000000, 2560, 0.506332, 1.915864, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+70000000, 2560, 0.495306, 2.032792, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+70000000, 2560, 0.499832, 1.882000, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+70000000, 2560, 0.507072, 2.755201, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+80000000, 2560, 0.575589, 2.304770, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+80000000, 2560, 0.737044, 2.458198, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+80000000, 2560, 0.575958, 2.526820, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+80000000, 2560, 0.579134, 2.303737, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+80000000, 2560, 0.733097, 2.895919, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+80000000, 2560, 0.581095, 2.391239, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+80000000, 2560, 0.573362, 2.270731, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+80000000, 2560, 0.740701, 3.354663, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+80000000, 2560, 0.590660, 2.327141, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+80000000, 2560, 0.565781, 2.356341, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+80000000, 2560, 0.657111, 3.303709, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+80000000, 2560, 0.571165, 2.257655, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+80000000, 2560, 0.664254, 2.299618, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+80000000, 2560, 0.569761, 2.828675, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+80000000, 2560, 0.573072, 2.291669, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+80000000, 2560, 0.743463, 2.661196, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+80000000, 2560, 0.589232, 2.417374, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+80000000, 2560, 0.582473, 2.370558, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+80000000, 2560, 0.723222, 3.006857, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+80000000, 2560, 0.562765, 2.287152, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+90000000, 2560, 0.652463, 2.808057, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+90000000, 2560, 0.827381, 3.129735, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+90000000, 2560, 0.663108, 3.409564, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+90000000, 2560, 0.641259, 2.761174, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+90000000, 2560, 0.643019, 2.717942, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+90000000, 2560, 0.810157, 3.742302, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+90000000, 2560, 0.650245, 3.143313, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+90000000, 2560, 0.658929, 2.753484, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+90000000, 2560, 0.665766, 2.741468, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+90000000, 2560, 0.800298, 3.868352, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+90000000, 2560, 0.658308, 2.768402, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+90000000, 2560, 0.647080, 2.709248, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+90000000, 2560, 0.830126, 2.993230, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+90000000, 2560, 0.654261, 3.813175, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+90000000, 2560, 0.638497, 2.801159, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+90000000, 2560, 0.657143, 2.721827, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+90000000, 2560, 0.827157, 3.143719, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+90000000, 2560, 0.661257, 3.433152, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+90000000, 2560, 0.647823, 2.698804, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+90000000, 2560, 0.625029, 2.739837, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+100000000, 2560, 0.927932, 4.000847, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+100000000, 2560, 0.716904, 4.506414, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+100000000, 2560, 0.712927, 3.726761, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+100000000, 2560, 0.730393, 3.306078, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+100000000, 2560, 0.716647, 3.297443, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+100000000, 2560, 0.797202, 3.223270, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+100000000, 2560, 0.919760, 4.112969, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+100000000, 2560, 0.713696, 4.412473, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+100000000, 2560, 0.698112, 3.500399, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+100000000, 2560, 0.711589, 3.249211, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+100000000, 2560, 0.717306, 3.284726, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+100000000, 2560, 0.938494, 3.346457, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+100000000, 2560, 0.944209, 4.270136, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+100000000, 2560, 0.725493, 4.324436, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+100000000, 2560, 0.740522, 3.853269, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+100000000, 2560, 0.729534, 3.251428, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+100000000, 2560, 0.724580, 3.260401, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+100000000, 2560, 0.710919, 3.290549, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+100000000, 2560, 0.925011, 3.845091, 0.000000
+inputLength, segmentSize, cpu_exec (s), gpu_exec (s), differece
+100000000, 2560, 0.719869, 4.464126, 0.000000
