@@ -1,6 +1,8 @@
 NVCC ?= nvcc
 
 NVCCFLAGS ?= -arch=sm_70
+NVCCFLAGS += -lcublas
+NVCCFLAGS += -lcusparse
 
 BUILD_DIR ?= ./
 
