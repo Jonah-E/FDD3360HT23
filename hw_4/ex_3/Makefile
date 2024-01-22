@@ -7,6 +7,7 @@ NVCCFLAGS += -lcusparse
 BUILD_DIR ?= ./
 
 all: $(BUILD_DIR)/heatEq
+	cp run $(BUILD_DIR)/run-heatEq
 
 $(BUILD_DIR)/%: $(BUILD_DIR)/%.o
 	$(NVCC) $(NVCCFLAGS) $^ -o $@
