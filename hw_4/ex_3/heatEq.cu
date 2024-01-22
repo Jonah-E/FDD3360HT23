@@ -106,9 +106,13 @@ int main(int argc, char** argv)
   printf("The X dimension of the grid is %d \n", dimX);
   printf("The number of time steps to perform is %d \n", nsteps);
 
+#ifndef NO_CONCURRENT_MEM
   // Get if the cudaDevAttrConcurrentManagedAccess flag is set
   gpuCheck(cudaDeviceGetAttribute(&concurrentAccessQ,
                                   cudaDevAttrConcurrentManagedAccess, device));
+#else
+  concurrentAccessQ = 0;
+#endif
 
   // Calculate the number of non zero values in the sparse matrix. This number
   // is known from the structure of the sparse matrix
@@ -182,6 +186,7 @@ int main(int argc, char** argv)
   gpuCheck(cudaMalloc(&buffer, bufferSize));
 
   // Perform the time step iterations
+  cputimer_start();
   for (int it = 0; it < nsteps; ++it) {
     cusparseCheck(cusparseSpMV(cusparseHandle, CUSPARSE_OPERATION_NON_TRANSPOSE,
                                &one, Adescriptor, tempDesc, &zero, tmpDesc,
@@ -198,6 +203,7 @@ int main(int argc, char** argv)
     if (norm < 1e-4)
       break;
   }
+  cputimer_stop("Calculations");
 
   // Calculate the exact solution using thrust
   thrust::device_ptr<double> thrustPtr(tmp);
