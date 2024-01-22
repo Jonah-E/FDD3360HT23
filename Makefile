@@ -19,3 +19,6 @@ vectorAdd-stream:
 histogram:
 	$(MAKE) -C hw_3/ex_1
 
+heatEq:
+	$(MAKE) -C hw_4/ex_3
+
