@@ -1,0 +1,281 @@
+Mon Jan 22 15:47:59 CET 2024
+The X dimension of the grid is 128 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3055271 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 153 microseconds 
+Timing - Initializing memory on the host. 		Elasped 2 microseconds 
+Timing - Calculations. 		Elasped 15555 microseconds 
+The relative error of the approximation is 3.318021
+The X dimension of the grid is 128 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3057076 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 147 microseconds 
+Timing - Initializing memory on the host. 		Elasped 2 microseconds 
+Timing - Calculations. 		Elasped 16088 microseconds 
+The relative error of the approximation is 3.318021
+The X dimension of the grid is 128 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3068191 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 150 microseconds 
+Timing - Initializing memory on the host. 		Elasped 2 microseconds 
+Timing - Calculations. 		Elasped 15395 microseconds 
+The relative error of the approximation is 3.318021
+The X dimension of the grid is 128 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3070699 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 150 microseconds 
+Timing - Initializing memory on the host. 		Elasped 1 microseconds 
+Timing - Calculations. 		Elasped 16064 microseconds 
+The relative error of the approximation is 3.318021
+The X dimension of the grid is 128 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3065591 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 150 microseconds 
+Timing - Initializing memory on the host. 		Elasped 2 microseconds 
+Timing - Calculations. 		Elasped 15538 microseconds 
+The relative error of the approximation is 3.318021
+The X dimension of the grid is 128 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3077185 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 149 microseconds 
+Timing - Initializing memory on the host. 		Elasped 2 microseconds 
+Timing - Calculations. 		Elasped 15685 microseconds 
+The relative error of the approximation is 3.318021
+The X dimension of the grid is 128 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3088926 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 159 microseconds 
+Timing - Initializing memory on the host. 		Elasped 1 microseconds 
+Timing - Calculations. 		Elasped 15646 microseconds 
+The relative error of the approximation is 3.318021
+The X dimension of the grid is 128 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3069899 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 150 microseconds 
+Timing - Initializing memory on the host. 		Elasped 2 microseconds 
+Timing - Calculations. 		Elasped 15811 microseconds 
+The relative error of the approximation is 3.318021
+The X dimension of the grid is 128 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3058111 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 154 microseconds 
+Timing - Initializing memory on the host. 		Elasped 3 microseconds 
+Timing - Calculations. 		Elasped 16119 microseconds 
+The relative error of the approximation is 3.318021
+The X dimension of the grid is 128 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3058686 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 150 microseconds 
+Timing - Initializing memory on the host. 		Elasped 2 microseconds 
+Timing - Calculations. 		Elasped 16161 microseconds 
+The relative error of the approximation is 3.318021
+The X dimension of the grid is 256 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3065327 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 150 microseconds 
+Timing - Initializing memory on the host. 		Elasped 1 microseconds 
+Timing - Calculations. 		Elasped 16038 microseconds 
+The relative error of the approximation is 4.924835
+The X dimension of the grid is 256 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3070054 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 150 microseconds 
+Timing - Initializing memory on the host. 		Elasped 2 microseconds 
+Timing - Calculations. 		Elasped 15434 microseconds 
+The relative error of the approximation is 4.924835
+The X dimension of the grid is 256 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3061447 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 151 microseconds 
+Timing - Initializing memory on the host. 		Elasped 2 microseconds 
+Timing - Calculations. 		Elasped 15707 microseconds 
+The relative error of the approximation is 4.924835
+The X dimension of the grid is 256 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3064783 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 150 microseconds 
+Timing - Initializing memory on the host. 		Elasped 1 microseconds 
+Timing - Calculations. 		Elasped 15514 microseconds 
+The relative error of the approximation is 4.924835
+The X dimension of the grid is 256 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3064645 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 151 microseconds 
+Timing - Initializing memory on the host. 		Elasped 2 microseconds 
+Timing - Calculations. 		Elasped 15609 microseconds 
+The relative error of the approximation is 4.924835
+The X dimension of the grid is 256 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3052610 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 150 microseconds 
+Timing - Initializing memory on the host. 		Elasped 1 microseconds 
+Timing - Calculations. 		Elasped 16423 microseconds 
+The relative error of the approximation is 4.924835
+The X dimension of the grid is 256 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3070746 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 148 microseconds 
+Timing - Initializing memory on the host. 		Elasped 2 microseconds 
+Timing - Calculations. 		Elasped 16049 microseconds 
+The relative error of the approximation is 4.924835
+The X dimension of the grid is 256 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3060866 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 156 microseconds 
+Timing - Initializing memory on the host. 		Elasped 2 microseconds 
+Timing - Calculations. 		Elasped 16181 microseconds 
+The relative error of the approximation is 4.924835
+The X dimension of the grid is 256 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3052279 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 152 microseconds 
+Timing - Initializing memory on the host. 		Elasped 2 microseconds 
+Timing - Calculations. 		Elasped 15619 microseconds 
+The relative error of the approximation is 4.924835
+The X dimension of the grid is 256 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3075749 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 150 microseconds 
+Timing - Initializing memory on the host. 		Elasped 2 microseconds 
+Timing - Calculations. 		Elasped 16217 microseconds 
+The relative error of the approximation is 4.924835
+The X dimension of the grid is 512 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3075471 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 153 microseconds 
+Timing - Initializing memory on the host. 		Elasped 2 microseconds 
+Timing - Calculations. 		Elasped 15986 microseconds 
+The relative error of the approximation is 7.123992
+The X dimension of the grid is 512 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3066560 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 152 microseconds 
+Timing - Initializing memory on the host. 		Elasped 1 microseconds 
+Timing - Calculations. 		Elasped 16303 microseconds 
+The relative error of the approximation is 7.123992
+The X dimension of the grid is 512 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3076138 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 156 microseconds 
+Timing - Initializing memory on the host. 		Elasped 2 microseconds 
+Timing - Calculations. 		Elasped 15644 microseconds 
+The relative error of the approximation is 7.123992
+The X dimension of the grid is 512 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3070824 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 151 microseconds 
+Timing - Initializing memory on the host. 		Elasped 2 microseconds 
+Timing - Calculations. 		Elasped 16117 microseconds 
+The relative error of the approximation is 7.123992
+The X dimension of the grid is 512 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3062973 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 154 microseconds 
+Timing - Initializing memory on the host. 		Elasped 2 microseconds 
+Timing - Calculations. 		Elasped 15701 microseconds 
+The relative error of the approximation is 7.123992
+The X dimension of the grid is 512 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3050613 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 154 microseconds 
+Timing - Initializing memory on the host. 		Elasped 2 microseconds 
+Timing - Calculations. 		Elasped 15923 microseconds 
+The relative error of the approximation is 7.123992
+The X dimension of the grid is 512 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3076909 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 151 microseconds 
+Timing - Initializing memory on the host. 		Elasped 2 microseconds 
+Timing - Calculations. 		Elasped 16144 microseconds 
+The relative error of the approximation is 7.123992
+The X dimension of the grid is 512 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3054874 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 152 microseconds 
+Timing - Initializing memory on the host. 		Elasped 2 microseconds 
+Timing - Calculations. 		Elasped 16237 microseconds 
+The relative error of the approximation is 7.123992
+The X dimension of the grid is 512 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3070999 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 159 microseconds 
+Timing - Initializing memory on the host. 		Elasped 1 microseconds 
+Timing - Calculations. 		Elasped 15732 microseconds 
+The relative error of the approximation is 7.123992
+The X dimension of the grid is 512 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3055954 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 156 microseconds 
+Timing - Initializing memory on the host. 		Elasped 2 microseconds 
+Timing - Calculations. 		Elasped 15575 microseconds 
+The relative error of the approximation is 7.123992
+The X dimension of the grid is 1024 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3083591 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 157 microseconds 
+Timing - Initializing memory on the host. 		Elasped 1 microseconds 
+Timing - Calculations. 		Elasped 16915 microseconds 
+The relative error of the approximation is 10.185756
+The X dimension of the grid is 1024 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3062833 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 157 microseconds 
+Timing - Initializing memory on the host. 		Elasped 2 microseconds 
+Timing - Calculations. 		Elasped 16354 microseconds 
+The relative error of the approximation is 10.185756
+The X dimension of the grid is 1024 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3078398 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 156 microseconds 
+Timing - Initializing memory on the host. 		Elasped 2 microseconds 
+Timing - Calculations. 		Elasped 16753 microseconds 
+The relative error of the approximation is 10.185756
+The X dimension of the grid is 1024 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3074291 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 156 microseconds 
+Timing - Initializing memory on the host. 		Elasped 2 microseconds 
+Timing - Calculations. 		Elasped 16599 microseconds 
+The relative error of the approximation is 10.185756
+The X dimension of the grid is 1024 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3056308 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 165 microseconds 
+Timing - Initializing memory on the host. 		Elasped 2 microseconds 
+Timing - Calculations. 		Elasped 15940 microseconds 
+The relative error of the approximation is 10.185756
+The X dimension of the grid is 1024 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3069617 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 155 microseconds 
+Timing - Initializing memory on the host. 		Elasped 3 microseconds 
+Timing - Calculations. 		Elasped 16221 microseconds 
+The relative error of the approximation is 10.185756
+The X dimension of the grid is 1024 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3077477 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 156 microseconds 
+Timing - Initializing memory on the host. 		Elasped 2 microseconds 
+Timing - Calculations. 		Elasped 16313 microseconds 
+The relative error of the approximation is 10.185756
+The X dimension of the grid is 1024 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3073915 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 156 microseconds 
+Timing - Initializing memory on the host. 		Elasped 1 microseconds 
+Timing - Calculations. 		Elasped 16753 microseconds 
+The relative error of the approximation is 10.185756
+The X dimension of the grid is 1024 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3073913 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 160 microseconds 
+Timing - Initializing memory on the host. 		Elasped 2 microseconds 
+Timing - Calculations. 		Elasped 16047 microseconds 
+The relative error of the approximation is 10.185756
+The X dimension of the grid is 1024 
+The number of time steps to perform is 100 
+Timing - Allocating device memory. 		Elasped 3055859 microseconds 
+Timing - Initializing the sparse matrix on the host. 		Elasped 156 microseconds 
+Timing - Initializing memory on the host. 		Elasped 2 microseconds 
+Timing - Calculations. 		Elasped 16506 microseconds 
+The relative error of the approximation is 10.185756
