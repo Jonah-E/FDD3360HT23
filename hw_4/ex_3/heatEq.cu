@@ -186,12 +186,13 @@ int main(int argc, char** argv)
   gpuCheck(cudaMalloc(&buffer, bufferSize));
 
   // Perform the time step iterations
-  cputimer_start();
   for (int it = 0; it < nsteps; ++it) {
+    cputimer_start();
     cusparseCheck(cusparseSpMV(cusparseHandle, CUSPARSE_OPERATION_NON_TRANSPOSE,
                                &one, Adescriptor, tempDesc, &zero, tmpDesc,
                                CUDA_R_64F, CUSPARSE_SPMV_ALG_DEFAULT, buffer));
     cudaDeviceSynchronize();
+    cputimer_stop("Sparse Matrix vector multiplication");
 
     cublasCheck(cublasDaxpy(cublasHandle, dimX, &alpha, tmp, 1, temp, 1));
     cudaDeviceSynchronize();
@@ -203,7 +204,6 @@ int main(int argc, char** argv)
     if (norm < 1e-4)
       break;
   }
-  cputimer_stop("Calculations");
 
   // Calculate the exact solution using thrust
   thrust::device_ptr<double> thrustPtr(tmp);
