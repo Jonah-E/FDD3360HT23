@@ -41,7 +41,7 @@ def create_plot():
 
     plt.errorbar(x, y, e, label = 'Without prefetching' , capsize=3)
 
-    plt.ylabel('Time (ms)')
+    plt.ylabel(r'Time ($\mu$s)')
     plt.xlabel('Length')
     plt.legend()
     plt.show()
