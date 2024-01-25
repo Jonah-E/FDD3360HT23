@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+LOOPS=$(seq 1 10)
+LENGTHS="128 256 512 1024"
+OUTPUT_FILE="output_heatEq_lengths.txt"
+date > $OUTPUT_FILE
+for L in $LENGTHS;
+do
+  for na in $LOOPS;
+  do
+    ./heatEq $L 100 | tee -a $OUTPUT_FILE
+  done
+done
+

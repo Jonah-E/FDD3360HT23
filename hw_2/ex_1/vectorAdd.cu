@@ -96,8 +96,8 @@ int main(int argc, char **argv) {
     return 1;
   }
 
-  printf("inputLength, cpu_exec (s), host_to_device (s), gpu_exec (s), device_to_host (s), differece\n");
-  printf("%d,", inputLength);
+  printf("inputLength, cpu_exec (s), gpu_exec (s), differece\n");
+  printf("%d, ", inputLength);
 
   hostInput1 = (DataType *)malloc(sizeof(DataType) * inputLength);
   hostInput2 = (DataType *)malloc(sizeof(DataType) * inputLength);
@@ -109,7 +109,7 @@ int main(int argc, char **argv) {
   time_start = getCpuSeconds();
   vecAddCPU(hostOutput, hostInput1, hostInput2, inputLength);
   time_elapsed = getCpuSeconds() - time_start;
-  printf("%lf,", time_elapsed);
+  printf("%lf, ", time_elapsed);
 
   time_start = getCpuSeconds();
   cudaMalloc(&deviceInput1, sizeof(DataType) * inputLength);
@@ -122,16 +122,12 @@ int main(int argc, char **argv) {
              cudaMemcpyHostToDevice);
   cudaMemset(deviceOutput, 0, sizeof(DataType) * inputLength);
   time_elapsed = getCpuSeconds() - time_start;
-  printf("%lf,", time_elapsed);
 
   dim3 block(TPW, 1, 1);
   dim3 grid((inputLength + TPW - 1) / TPW, 1, 1);
-  time_start = getCpuSeconds();
   vecAddGPU<<<grid, block>>>(deviceOutput, deviceInput1, deviceInput2,
                              inputLength);
   cudaDeviceSynchronize();
-  time_elapsed = getCpuSeconds() - time_start;
-  printf("%lf,", time_elapsed);
 
   cudaError_t deviceError = cudaGetLastError();
   if (deviceError != cudaSuccess) {
@@ -140,11 +136,10 @@ int main(int argc, char **argv) {
   } else {
     resultRef = (DataType *)malloc(sizeof(DataType) * inputLength);
 
-    time_start = getCpuSeconds();
     cudaMemcpy(resultRef, deviceOutput, sizeof(DataType) * inputLength,
                cudaMemcpyDeviceToHost);
     time_elapsed = getCpuSeconds() - time_start;
-    printf("%lf,", time_elapsed);
+    printf("%lf, ", time_elapsed);
 
     DataType diffEu =
         euclicianNormTwoVectors(resultRef, hostOutput, inputLength);

@@ -13,6 +13,12 @@ matrixMult:
 matrixMult-float:
 	$(MAKE) -C hw_2/ex_2 FLAGS=-DUSE_FLOAT
 
+vectorAdd-stream:
+	$(MAKE) -C hw_4/ex_2
+
 histogram:
 	$(MAKE) -C hw_3/ex_1
+
+heatEq:
+	$(MAKE) -C hw_4/ex_3
 

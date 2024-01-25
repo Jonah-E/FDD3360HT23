@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+N_STEPS=$(seq 100 100 10000)
+
+OUTPUT_FILE="output_heatEq.txt"
+date > $OUTPUT_FILE
+for N in $N_STEPS;
+do
+  ./heatEq 128 $N | tee -a $OUTPUT_FILE
+done
+
